@@ -1,7 +1,3 @@
-//generare una griglia a seconda del livello 
-//difficoltà 1 => tra 1 e 100
-//difficoltà 2 => tra 1 e 81
-// difficoltà 3 => tra 1 e 49
 //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 //Usare prompt per chiedere il livello di difficolta
@@ -32,5 +28,13 @@ if (userDifficulty == 1) {
 
 }
 
-console.log(maxValue);
+//generare una griglia a seconda del livello 
+//difficoltà 1 => tra 1 e 100
+//difficoltà 2 => tra 1 e 81
+// difficoltà 3 => tra 1 e 49
+
+for (let i = 0; i <= maxValue; i++) {
+    const cell = `<div>${i}</div>`
+    container.insertAdjacentHTML('beforeend', cell)
+}
 
