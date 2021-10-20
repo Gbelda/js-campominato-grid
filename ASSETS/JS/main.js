@@ -22,7 +22,7 @@ if (userDifficulty == 1) {
     maxValue = 49;
 
 } else {
-    alert("IDevi inserire: 1 o 2 o 3")
+    alert("Devi inserire: 1 o 2 o 3")
 
 }
 
@@ -32,15 +32,25 @@ if (userDifficulty == 1) {
 // difficoltà 3 => tra 1 e 49
 
 for (let i = 1; i <= maxValue; i++) {
-    const cellElement = `<div class="cell">${i}</div>`
-    container.insertAdjacentHTML('beforeend', cellElement)
+    const divEl = document.createElement('div')
+    divEl.className = "cell"
+    divEl.append(i)
+    container.append(divEl)
 
-    document.querySelector(".cell").addEventListener('click', function () {
-        console.log("clicked");
+    divEl.addEventListener("click", function () {
+        divEl.classList.add("blue")
     })
 }
 
 
 
+// const cellElement = `<div class="cell">${i}</div>`
+// container.insertAdjacentHTML('beforeend', cellElement)
+
+// const cell = document.querySelector(".cell")
+// cell.addEventListener("click", function () {
+
+//     console.log(cell.classList);
+// })
 //Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
