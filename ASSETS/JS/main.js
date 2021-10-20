@@ -1,7 +1,5 @@
-//Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-//Usare prompt per chiedere il livello di difficolta
-//creare funzione con loop per stabilire il numero di celle
+
 //collegare il prompt con il loop utilizzando il condizionale
 //Assegnare un event listener a una cella utilizzando "This"
 
@@ -24,7 +22,7 @@ if (userDifficulty == 1) {
     maxValue = 49;
 
 } else {
-    alert("Inserisci 1 o 2 o 3")
+    alert("IDevi inserire: 1 o 2 o 3")
 
 }
 
@@ -33,8 +31,16 @@ if (userDifficulty == 1) {
 //difficoltà 2 => tra 1 e 81
 // difficoltà 3 => tra 1 e 49
 
-for (let i = 0; i <= maxValue; i++) {
-    const cell = `<div>${i}</div>`
-    container.insertAdjacentHTML('beforeend', cell)
+for (let i = 1; i <= maxValue; i++) {
+    const cellElement = `<div class="cell">${i}</div>`
+    container.insertAdjacentHTML('beforeend', cellElement)
+
+    document.querySelector(".cell").addEventListener('click', function () {
+        console.log("clicked");
+    })
 }
+
+
+
+//Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
